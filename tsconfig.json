@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "public/worker.js"  ]
+, "public/worker.js", "public/firebase-messaging-sw.js"  ]
 }
