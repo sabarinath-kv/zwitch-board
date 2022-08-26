@@ -9,9 +9,23 @@
       content="Web site created using create-react-app"
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" href="/1.jpg">
+    		<!-- PWA Script -->
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', () => {
+					navigator.serviceWorker
+						.register('./serviceWorker.js')
+						.then((reg) => console.log('Success: ', reg.scope))
+						.catch((err) => console.log('Failure: ', err));
+				});
+			}
+		</script>
     <title>Zwitch Board</title>
   </head>
   <body>
     <div id="root"></div>
-  </body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <button class="add-button">Add to home screen</button>  </body>
 </html>
